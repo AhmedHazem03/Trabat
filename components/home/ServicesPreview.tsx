@@ -31,20 +31,6 @@ const services = [
     ),
   },
   {
-    id: "international",
-    title: "النقل الدولي",
-    description: "نقل البضائع خارج الكويت وإلى دول الخليج والعالم العربي مع جميع الوثائق الجمركية.",
-    waMessage: "السلام عليكم، أريد الاستفسار عن النقل الدولي",
-    service: "international",
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="10"/>
-        <line x1="2" y1="12" x2="22" y2="12"/>
-        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-      </svg>
-    ),
-  },
-  {
     id: "storage",
     title: "التخزين المؤقت",
     description: "مستودعات آمنة ومؤمنة لتخزين أغراضك بضمان تام حتى موعد نقلها.",
@@ -78,7 +64,7 @@ export default function ServicesPreview() {
         </div>
 
         {/* الكروت */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div
               key={service.id}

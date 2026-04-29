@@ -55,12 +55,12 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        {/* الكروت — موبايل: scroll أفقي / ديسكتوب: 3 أعمدة */}
-        <div className="flex gap-5 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:overflow-visible md:pb-0 snap-x snap-mandatory md:snap-none">
+        {/* الكروت — موبايل: عمود واحد / ديسكتوب: 3 أعمدة */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="min-w-[280px] sm:min-w-[320px] md:min-w-0 shrink-0 md:shrink bg-dark border border-white/8 rounded-2xl p-6 flex flex-col gap-4 snap-start"
+              className="bg-dark border border-white/8 rounded-2xl p-6 flex flex-col gap-4"
             >
               {/* النجوم */}
               <StarRating count={t.rating} />

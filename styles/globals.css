@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-arabic: var(--font-cairo), var(--font-noto-kufi), sans-serif;
+  --font-latin: var(--font-inter), sans-serif;
+
+  --color-gold: #C9A84C;
+  --color-gold-light: #F0D080;
+  --color-gold-dark: #8B6914;
+  --color-dark: #0D0D0D;
+  --color-dark-card: #1A1A1A;
+  --color-dark-surface: #242424;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-arabic);
+  }
+}
+
+/* ===== Marquee (CSS خالص — لا مكتبات) ===== */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  direction: ltr; /* إلزامي في RTL — يمنع انعكاس الاتجاه */
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-track {
+    animation-duration: 20s;
+  }
+}
+
+/* ===== Utility: خلفية نقاط texture ===== */
+.dot-texture {
+  background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0);
+  background-size: 32px 32px;
+}

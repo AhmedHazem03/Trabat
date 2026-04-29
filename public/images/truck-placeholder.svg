@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <!-- خلفية -->
+  <rect width="800" height="500" fill="#1A1A1A"/>
+
+  <!-- الطريق -->
+  <rect x="0" y="380" width="800" height="120" fill="#242424"/>
+  <rect x="0" y="380" width="800" height="4" fill="#C9A84C" opacity="0.3"/>
+  <!-- خطوط الطريق المنقطة -->
+  <rect x="60" y="430" width="80" height="8" rx="4" fill="#C9A84C" opacity="0.2"/>
+  <rect x="220" y="430" width="80" height="8" rx="4" fill="#C9A84C" opacity="0.2"/>
+  <rect x="380" y="430" width="80" height="8" rx="4" fill="#C9A84C" opacity="0.2"/>
+  <rect x="540" y="430" width="80" height="8" rx="4" fill="#C9A84C" opacity="0.2"/>
+  <rect x="700" y="430" width="80" height="8" rx="4" fill="#C9A84C" opacity="0.2"/>
+
+  <!-- الشاحنة — هيكل المقطورة -->
+  <rect x="120" y="210" width="420" height="170" rx="8" fill="#2A2A2A" stroke="#C9A84C" stroke-width="2" stroke-opacity="0.4"/>
+  <!-- خطوط المقطورة -->
+  <line x1="230" y1="210" x2="230" y2="380" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="340" y1="210" x2="340" y2="380" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.2"/>
+  <line x1="450" y1="210" x2="450" y2="380" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- شعار تربات على المقطورة -->
+  <text x="295" y="305" font-family="sans-serif" font-size="42" font-weight="bold" fill="#C9A84C" opacity="0.7" text-anchor="middle">تربات</text>
+
+  <!-- مقدمة الشاحنة (الكابينة) -->
+  <path d="M540 240 L540 380 L680 380 L680 270 L650 240 Z" fill="#333333" stroke="#C9A84C" stroke-width="2" stroke-opacity="0.5"/>
+  <!-- زجاج الكابينة -->
+  <path d="M557 252 L557 310 L665 310 L665 268 L638 252 Z" fill="#C9A84C" fill-opacity="0.15" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- شبكة الراديتور -->
+  <rect x="665" y="310" width="15" height="60" rx="3" fill="#2A2A2A" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- العجلات -->
+  <!-- عجلات المقطورة الأمامية -->
+  <circle cx="190" cy="385" r="32" fill="#1A1A1A" stroke="#C9A84C" stroke-width="2" stroke-opacity="0.5"/>
+  <circle cx="190" cy="385" r="18" fill="#242424" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="190" cy="385" r="6" fill="#C9A84C" opacity="0.4"/>
+
+  <!-- عجلات المقطورة الخلفية -->
+  <circle cx="430" cy="385" r="32" fill="#1A1A1A" stroke="#C9A84C" stroke-width="2" stroke-opacity="0.5"/>
+  <circle cx="430" cy="385" r="18" fill="#242424" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="430" cy="385" r="6" fill="#C9A84C" opacity="0.4"/>
+
+  <!-- عجلة الكابينة الأمامية -->
+  <circle cx="630" cy="385" r="32" fill="#1A1A1A" stroke="#C9A84C" stroke-width="2" stroke-opacity="0.5"/>
+  <circle cx="630" cy="385" r="18" fill="#242424" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="630" cy="385" r="6" fill="#C9A84C" opacity="0.4"/>
+
+  <!-- أضواء الشاحنة -->
+  <rect x="677" y="278" width="8" height="16" rx="2" fill="#F0D080" opacity="0.8"/>
+  <rect x="677" y="356" width="8" height="14" rx="2" fill="#C9A84C" opacity="0.6"/>
+
+  <!-- ظل تحت الشاحنة -->
+  <ellipse cx="400" cy="390" rx="280" ry="12" fill="black" opacity="0.3"/>
+</svg>

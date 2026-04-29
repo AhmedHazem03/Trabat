@@ -1,66 +1,80 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import type { Metadata } from "next";
+import HeroSection from "@/components/home/HeroSection";
+import CounterSection from "@/components/home/CounterSection";
+import ServicesPreview from "@/components/home/ServicesPreview";
+import AreasStrip from "@/components/home/AreasStrip";
+import WhyUs from "@/components/home/WhyUs";
+import Testimonials from "@/components/home/Testimonials";
+import CTASection from "@/components/home/CTASection";
+import Footer from "@/components/layout/Footer";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: { absolute: "تربات لنقل البضائع في الكويت | نقل منزلي وتجاري ودولي" },
+  description:
+    "تربات — خدمة نقل بضائع احترافية في أكثر من 22 منطقة بالكويت. نقل منزلي، تجاري، دولي وتخزين مؤقت. فك وتركيب وتغليف. تواصل معنا عبر واتساب.",
+  keywords: ["نقل عفش الكويت", "نقل بضائع", "شركة نقل الكويت", "نقل أثاث"],
+  alternates: { canonical: "https://turbat.com.kw" },
+  openGraph: {
+    title: "تربات لنقل البضائع في الكويت | نقل منزلي وتجاري ودولي",
+    description:
+      "خدمة نقل بضائع احترافية في أكثر من 22 منطقة بالكويت. تواصل عبر واتساب.",
+    url: "https://turbat.com.kw",
+  },
+};
+
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["MovingCompany", "LocalBusiness"],
+  name: "تربات لنقل البضائع",
+  description:
+    "خدمة نقل بضائع وأثاث احترافية في الكويت. نقل منزلي، تجاري، دولي وتخزين.",
+  url: "https://turbat.com.kw",
+  telephone: "+96597355268",
+  areaServed: { "@type": "Country", name: "الكويت" },
+  sameAs: ["https://instagram.com/turbat_kw"],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Saturday",
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+      ],
+      opens: "08:00",
+      closes: "22:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Friday",
+      opens: "10:00",
+      closes: "22:00",
+    },
+  ],
+};
+
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      {/* JSON-LD — RULE-09 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+      />
+
+      <main>
+        <HeroSection />
+        <CounterSection />
+        <ServicesPreview />
+        <AreasStrip />
+        <WhyUs />
+        <Testimonials />
+        <CTASection />
       </main>
-    </div>
+
+      <Footer />
+    </>
   );
 }

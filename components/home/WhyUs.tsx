@@ -48,14 +48,14 @@ const features = [
 
 export default function WhyUs() {
   return (
-    <section className="bg-dark py-16 md:py-24">
+    <section className="bg-light py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* العنوان */}
         <div className="text-center mb-12">
           <span className="text-gold text-sm font-semibold uppercase tracking-widest mb-3 block">
             لماذا تربات؟
           </span>
-          <h2 className="text-2xl md:text-4xl font-bold text-white">
+          <h2 className="text-2xl md:text-4xl font-bold text-dark">
             نتميز بما يهمك
           </h2>
         </div>
@@ -64,15 +64,15 @@ export default function WhyUs() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-dark-card border border-white/8 hover:border-white/20 transition-colors duration-300 group"
+              className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all duration-300 group"
             >
               <div className={`w-14 h-14 rounded-xl flex items-center justify-center transition-colors duration-300 shrink-0 ${feature.accent}`}>
                 {feature.icon}
               </div>
-              <h3 className="text-white font-bold text-base leading-snug">
+              <h3 className="text-dark font-bold text-base leading-snug">
                 {feature.title}
               </h3>
-              <p className="text-white/50 text-sm leading-relaxed">
+              <p className="text-dark/55 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </div>

@@ -126,7 +126,7 @@ export default function Navbar() {
       {/* Drawer — يفتح من اليسار (RTL end) */}
       <div
         ref={drawerRef}
-        className={`fixed top-0 end-0 z-[60] h-full w-72 bg-dark-card shadow-2xl transform transition-transform duration-300 ease-in-out md:hidden flex flex-col ${
+        className={`fixed top-0 end-0 z-[60] h-full w-72 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out md:hidden flex flex-col ${
           drawerOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         id="mobile-drawer"
@@ -135,7 +135,7 @@ export default function Navbar() {
         aria-label="قائمة التنقل"
       >
         {/* رأس الـ drawer */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+        <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
           <Image
             src="/images/Trabat.png"
             alt="تربات لنقل البضائع"
@@ -145,7 +145,7 @@ export default function Navbar() {
           />
           <button
             onClick={() => setDrawerOpen(false)}
-            className="flex items-center justify-center w-10 h-10 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors"
+            className="flex items-center justify-center w-10 h-10 rounded-lg text-dark/50 hover:text-dark hover:bg-gray-100 transition-colors"
             aria-label="إغلاق القائمة"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
@@ -162,7 +162,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setDrawerOpen(false)}
-              className="text-white/75 hover:text-brand-red hover:bg-white/5 active:bg-white/10 transition-colors duration-150 py-3 px-4 rounded-xl text-[15px] font-medium min-h-[48px] flex items-center border border-transparent hover:border-brand-red/20"
+              className="text-dark/70 hover:text-brand-red hover:bg-gray-50 active:bg-gray-100 transition-colors duration-150 py-3 px-4 rounded-xl text-[15px] font-medium min-h-[48px] flex items-center border border-transparent hover:border-brand-red/20"
             >
               {link.label}
             </Link>
@@ -170,7 +170,7 @@ export default function Navbar() {
         </nav>
 
         {/* أزرار التواصل */}
-        <div className="px-4 pb-6 pt-4 border-t border-white/10 flex flex-col gap-3">
+        <div className="px-4 pb-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
           <a
             href={contact.whatsapp.general}
             target="_blank"
@@ -186,7 +186,7 @@ export default function Navbar() {
           <a
             href={`tel:${contact.phone}`}
             onClick={() => setDrawerOpen(false)}
-            className="flex items-center justify-center gap-2 bg-white/8 hover:bg-white/15 text-white font-medium px-5 py-3 rounded-xl transition-colors duration-200 w-full min-h-[48px] text-sm border border-white/10"
+            className="flex items-center justify-center gap-2 bg-gray-50 hover:bg-gray-100 text-dark font-medium px-5 py-3 rounded-xl transition-colors duration-200 w-full min-h-[48px] text-sm border border-gray-200"
           >
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 10.72 19.79 19.79 0 01.75 2.11 2 2 0 012.73.01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l.91-.91a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>

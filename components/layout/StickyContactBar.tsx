@@ -5,13 +5,13 @@ import { contact } from "@/lib/contact";
 
 export default function StickyContactBar() {
   return (
-    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-dark-card border-t border-white/10 pb-[env(safe-area-inset-bottom)]">
+    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white border-t border-gray-200 pb-[env(safe-area-inset-bottom)]">
       <div className="grid grid-cols-3">
         {/* اتصل */}
         <a
           href={`tel:${contact.phone}`}
           onClick={() => trackContact("phone")}
-          className="flex flex-col items-center justify-center gap-1 text-white/70 hover:text-brand-red hover:bg-white/5 transition-colors duration-200 py-3 min-h-[56px]"
+          className="flex flex-col items-center justify-center gap-1 text-dark/60 hover:text-brand-red hover:bg-gray-50 transition-colors duration-200 py-3 min-h-[56px]"
           aria-label="اتصل بنا"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -26,7 +26,7 @@ export default function StickyContactBar() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackContact("whatsapp")}
-          className="flex flex-col items-center justify-center gap-1 bg-brand-red/10 text-brand-red hover:bg-brand-red/20 transition-colors duration-200 py-3 border-x border-white/10 min-h-[56px]"
+          className="flex flex-col items-center justify-center gap-1 bg-brand-red/10 text-brand-red hover:bg-brand-red/20 transition-colors duration-200 py-3 border-x border-gray-200 min-h-[56px]"
           aria-label="تواصل عبر واتساب"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -41,7 +41,7 @@ export default function StickyContactBar() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackContact("instagram")}
-          className="flex flex-col items-center justify-center gap-1 text-white/70 hover:text-pink-400 hover:bg-white/5 transition-colors duration-200 py-3 min-h-[56px]"
+          className="flex flex-col items-center justify-center gap-1 text-dark/60 hover:text-pink-500 hover:bg-gray-50 transition-colors duration-200 py-3 min-h-[56px]"
           aria-label="تابعنا على انستغرام"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

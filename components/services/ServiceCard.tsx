@@ -50,7 +50,7 @@ export default function ServiceCard({
   const a = accentMap[accent];
 
   return (
-    <div className="bg-dark-card border border-white/8 rounded-2xl overflow-hidden flex flex-col hover:border-white/15 transition-colors duration-300">
+    <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden flex flex-col shadow-sm hover:shadow-md hover:border-gray-200 transition-all duration-300">
       {/* شريط اللون العلوي */}
       <div className={`h-1 ${a.bar}`} aria-hidden="true" />
 
@@ -61,7 +61,7 @@ export default function ServiceCard({
             {icon}
           </div>
           <div>
-            <h3 className="text-xl font-bold text-white leading-tight">{title}</h3>
+            <h3 className="text-xl font-bold text-dark leading-tight">{title}</h3>
             {startingPrice && (
               <span className={`text-sm font-semibold mt-1 block ${a.price}`}>
                 يبدأ من {startingPrice}
@@ -71,12 +71,12 @@ export default function ServiceCard({
         </div>
 
         {/* وصف */}
-        <p className="text-white/60 text-sm leading-relaxed">{description}</p>
+        <p className="text-dark/60 text-sm leading-relaxed">{description}</p>
 
         {/* مميزات */}
         <ul className="space-y-2">
           {features.map((feature) => (
-            <li key={feature} className="flex items-center gap-2 text-white/70 text-sm">
+            <li key={feature} className="flex items-center gap-2 text-dark/65 text-sm">
               <svg
                 width="16"
                 height="16"

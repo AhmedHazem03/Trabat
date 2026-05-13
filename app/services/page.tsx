@@ -115,15 +115,15 @@ export default function ServicesPage() {
 
       <main>
         {/* Hero */}
-        <section className="bg-dark pt-28 pb-16 md:pt-36 md:pb-20">
+        <section className="bg-light pt-28 pb-16 md:pt-36 md:pb-20 border-b border-gray-100">
           <div className="container mx-auto px-4 text-center">
-            <span className="text-gold text-sm font-semibold uppercase tracking-widest mb-4 block">
+            <span className="text-brand-red text-sm font-semibold uppercase tracking-widest mb-4 block">
               خدماتنا
             </span>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold text-dark mb-4">
               كل ما تحتاجه للنقل في مكان واحد
             </h1>
-            <p className="text-white/50 max-w-xl mx-auto text-lg">
+            <p className="text-dark/55 max-w-xl mx-auto text-lg">
               من النقل المنزلي إلى التجاري والدولي — نقدم حلول نقل متكاملة باحترافية عالية
             </p>
             <GoldDivider className="mt-10 max-w-xs mx-auto" />
@@ -131,7 +131,7 @@ export default function ServicesPage() {
         </section>
 
         {/* بطاقات الخدمات */}
-        <section className="bg-dark py-12 md:py-16">
+        <section className="bg-white py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {services.map((service, i) => (
@@ -142,13 +142,13 @@ export default function ServicesPage() {
         </section>
 
         {/* الأسئلة الشائعة */}
-        <section className="bg-dark-card py-16 md:py-20">
+        <section className="bg-light py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
               <span className="text-gold text-sm font-semibold uppercase tracking-widest mb-3 block">
                 الأسئلة الشائعة
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-white">
+              <h2 className="text-2xl md:text-3xl font-bold text-dark">
                 أسئلة يسألها عملاؤنا كثيراً
               </h2>
             </div>

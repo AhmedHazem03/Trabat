@@ -51,7 +51,7 @@ export default function FAQAccordion() {
         return (
           <div
             key={index}
-            className="bg-dark-card border border-white/8 rounded-xl overflow-hidden transition-colors duration-200 hover:border-brand-red/25"
+            className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm transition-all duration-200 hover:border-brand-red/30 hover:shadow-md"
           >
             <button
               type="button"
@@ -59,7 +59,7 @@ export default function FAQAccordion() {
               className="w-full flex items-center justify-between gap-4 px-6 py-5 text-start min-h-[44px]"
               aria-expanded={isOpen}
             >
-              <span className="text-white font-semibold text-sm md:text-base">
+              <span className="text-dark font-semibold text-sm md:text-base">
                 {faq.question}
               </span>
               <motion.span
@@ -94,8 +94,8 @@ export default function FAQAccordion() {
                   style={{ overflow: "hidden" }}
                 >
                   <div className="px-6 pb-5">
-                    <div className="h-px bg-white/8 mb-4" aria-hidden="true" />
-                    <p className="text-white/60 text-sm leading-relaxed">
+                    <div className="h-px bg-gray-100 mb-4" aria-hidden="true" />
+                    <p className="text-dark/60 text-sm leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>

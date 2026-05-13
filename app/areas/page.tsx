@@ -15,14 +15,14 @@ export const metadata: Metadata = {
 
 export default function AreasPage() {
   return (
-    <main className="min-h-screen bg-dark text-white">
+    <main className="min-h-screen bg-white text-dark">
       {/* Hero */}
-      <section className="bg-dark-surface py-16 md:py-24 text-center px-4">
-        <h1 className="text-3xl md:text-5xl font-bold text-gold mb-4">
-          مناطق الخدمة
+      <section className="bg-light pt-28 pb-16 md:pt-36 md:pb-24 text-center px-4 border-b border-gray-100">
+        <h1 className="text-3xl md:text-5xl font-bold text-dark mb-4">
+          مناطق <span className="text-brand-red">الخدمة</span>
         </h1>
-        <p className="text-white/70 text-lg max-w-2xl mx-auto">
-          نغطي أكثر من <span className="text-gold font-bold">22 منطقة</span> في
+        <p className="text-dark/60 text-lg max-w-2xl mx-auto">
+          نغطي أكثر من <span className="text-brand-red font-bold">22 منطقة</span> في
           الكويت. اختر منطقتك وتواصل معنا مباشرة.
         </p>
       </section>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
-import CounterSection from "@/components/home/CounterSection";
 import ServicesPreview from "@/components/home/ServicesPreview";
 import AreasStrip from "@/components/home/AreasStrip";
 import WhyUs from "@/components/home/WhyUs";
@@ -66,7 +65,6 @@ export default function HomePage() {
 
       <main>
         <HeroSection />
-        <CounterSection />
         <ServicesPreview />
         <AreasStrip />
         <WhyUs />

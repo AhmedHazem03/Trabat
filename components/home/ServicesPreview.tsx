@@ -51,17 +51,17 @@ const services = [
 
 export default function ServicesPreview() {
   return (
-    <section className="bg-dark py-16 md:py-24">
+    <section className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* العنوان */}
         <div className="text-center mb-12">
           <span className="text-gold text-sm font-semibold uppercase tracking-widest mb-3 block">
             خدماتنا
           </span>
-          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-dark mb-4">
             حلول نقل شاملة لكل احتياجاتك
           </h2>
-          <p className="text-white/50 max-w-xl mx-auto">
+          <p className="text-dark/55 max-w-xl mx-auto">
             نوفر خدمات نقل متكاملة للأفراد والشركات بأعلى معايير الجودة والأمان.
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function ServicesPreview() {
           {services.map((service) => (
             <div
               key={service.id}
-              className={`bg-dark-card border border-white/8 rounded-2xl overflow-hidden flex flex-col transition-colors duration-300 group ${service.accent.hover}`}
+              className={`bg-light border border-gray-100 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 group shadow-sm hover:shadow-md ${service.accent.hover}`}
             >
               {/* شريط اللون العلوي */}
               <div className={`h-1 ${service.accent.bar}`} aria-hidden="true" />
@@ -84,8 +84,8 @@ export default function ServicesPreview() {
 
                 {/* النص */}
                 <div className="flex-1">
-                  <h3 className="text-white font-bold text-lg mb-2">{service.title}</h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{service.description}</p>
+                  <h3 className="text-dark font-bold text-lg mb-2">{service.title}</h3>
+                  <p className="text-dark/55 text-sm leading-relaxed">{service.description}</p>
                 </div>
 
                 {/* الزر */}

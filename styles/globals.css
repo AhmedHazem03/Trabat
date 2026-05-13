@@ -19,6 +19,9 @@
   --color-dark-card: #152038;
   --color-dark-surface: #1E3356;
 
+  /* Light — للأقسام الفاتحة */
+  --color-light: #F4F7FB;
+
   /* Navy accent — للأيقونات والحدود على الخلفية الداكنة */
   --color-navy-accent: #3B6CB5;
 }
@@ -26,7 +29,7 @@
 @layer base {
   body {
     font-family: var(--font-arabic);
-    background-color: var(--color-dark);
+    background-color: #ffffff;
   }
 }
 

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import CounterSection from "@/components/home/CounterSection";
 import CTASection from "@/components/home/CTASection";
 import GoldDivider from "@/components/ui/GoldDivider";
 
@@ -86,15 +85,15 @@ export default function AboutPage() {
 
       <main>
         {/* Hero */}
-        <section className="bg-dark pt-28 pb-16 md:pt-36 md:pb-20">
+        <section className="bg-light pt-28 pb-16 md:pt-36 md:pb-20 border-b border-gray-100">
           <div className="container mx-auto px-4 text-center">
-            <span className="text-gold text-sm font-semibold uppercase tracking-widest mb-4 block">
+            <span className="text-brand-red text-sm font-semibold uppercase tracking-widest mb-4 block">
               من نحن
             </span>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold text-dark mb-4">
               قصتنا مع النقل في الكويت
             </h1>
-            <p className="text-white/50 max-w-xl mx-auto text-lg">
+            <p className="text-dark/55 max-w-xl mx-auto text-lg">
               بدأنا صغاراً بحلم كبير — أن نكون الخيار الأول لكل من يبحث عن نقل موثوق في الكويت
             </p>
             <GoldDivider className="mt-10 max-w-xs mx-auto" />
@@ -102,7 +101,7 @@ export default function AboutPage() {
         </section>
 
         {/* قصة التأسيس */}
-        <section className="bg-dark-card py-16 md:py-20">
+        <section className="bg-white py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -111,10 +110,10 @@ export default function AboutPage() {
                   <span className="text-gold text-sm font-semibold uppercase tracking-widest mb-3 block">
                     قصة التأسيس
                   </span>
-                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-5">
+                  <h2 className="text-2xl md:text-3xl font-bold text-dark mb-5">
                     من فكرة إلى ثقة يومية
                   </h2>
-                  <div className="space-y-4 text-white/60 text-sm leading-relaxed">
+                  <div className="space-y-4 text-dark/60 text-sm leading-relaxed">
                     <p>
                       انطلقت تربات من الكويت بفكرة بسيطة: أن النقل يجب أن يكون تجربة مريحة لا
                       مُجهِدة. رأينا كيف يعاني الناس من شركات غير موثوقة، وعمال غير متخصصين،
@@ -142,12 +141,12 @@ export default function AboutPage() {
                   ].map((stat) => (
                     <div
                       key={stat.label}
-                      className="bg-dark-surface border border-white/8 rounded-xl p-4 text-center"
+                      className="bg-light border border-gray-100 rounded-xl p-4 text-center shadow-sm"
                     >
                       <div className="text-2xl md:text-3xl font-bold text-gold mb-1">
                         {stat.number}
                       </div>
-                      <div className="text-white/50 text-xs">{stat.label}</div>
+                      <div className="text-dark/50 text-xs">{stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -157,34 +156,34 @@ export default function AboutPage() {
         </section>
 
         {/* الرسالة والرؤية */}
-        <section className="bg-dark py-16 md:py-20">
+        <section className="bg-light py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <span className="text-gold text-sm font-semibold uppercase tracking-widest mb-3 block">
                 هويتنا
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-white">
+              <h2 className="text-2xl md:text-3xl font-bold text-dark">
                 رسالتنا ورؤيتنا
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {/* الرسالة */}
-              <div className="bg-dark-card border border-brand-red/25 rounded-2xl p-6 md:p-8">
+              <div className="bg-white border border-brand-red/25 rounded-2xl p-6 md:p-8 shadow-sm">
                 <div className="w-10 h-10 rounded-xl bg-brand-red/10 flex items-center justify-center text-brand-red mb-4">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">رسالتنا</h3>
-                <p className="text-white/60 text-sm leading-relaxed">
+                <h3 className="text-lg font-bold text-dark mb-3">رسالتنا</h3>
+                <p className="text-dark/60 text-sm leading-relaxed">
                   تقديم خدمة نقل بضائع احترافية وموثوقة لكل عميل في الكويت، مع ضمان سلامة
                   ممتلكاتهم والالتزام التام بالمواعيد والأسعار المتفق عليها.
                 </p>
               </div>
 
               {/* الرؤية */}
-              <div className="bg-dark-card border border-navy-accent/25 rounded-2xl p-6 md:p-8">
+              <div className="bg-white border border-navy-accent/25 rounded-2xl p-6 md:p-8 shadow-sm">
                 <div className="w-10 h-10 rounded-xl bg-navy-accent/10 flex items-center justify-center text-navy-accent mb-4">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <circle cx="12" cy="12" r="10" />
@@ -195,8 +194,8 @@ export default function AboutPage() {
                     <line x1="19" y1="12" x2="22" y2="12" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">رؤيتنا</h3>
-                <p className="text-white/60 text-sm leading-relaxed">
+                <h3 className="text-lg font-bold text-dark mb-3">رؤيتنا</h3>
+                <p className="text-dark/60 text-sm leading-relaxed">
                   أن نكون الشركة الأولى في الكويت لنقل البضائع من حيث الجودة والثقة، ونوسّع
                   خدماتنا لتغطي كامل دول الخليج.
                 </p>
@@ -206,13 +205,13 @@ export default function AboutPage() {
         </section>
 
         {/* القيم */}
-        <section className="bg-dark-card py-16 md:py-20">
+        <section className="bg-white py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <span className="text-gold text-sm font-semibold uppercase tracking-widest mb-3 block">
                 ما يميزنا
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-white">
+              <h2 className="text-2xl md:text-3xl font-bold text-dark">
                 قيمنا التي نعمل بها يومياً
               </h2>
             </div>
@@ -221,15 +220,15 @@ export default function AboutPage() {
               {values.map((value, i) => (
                 <div
                   key={value.title}
-                  className={`bg-dark-surface border rounded-2xl p-5 md:p-6 text-center transition-colors duration-300 ${valueAccents[i].card}`}
+                  className={`bg-light border rounded-2xl p-5 md:p-6 text-center shadow-sm transition-all duration-300 hover:shadow-md ${valueAccents[i].card}`}
                 >
                   <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center mx-auto mb-4 ${valueAccents[i].icon}`}>
                     {value.icon}
                   </div>
-                  <h3 className="text-white font-bold text-sm md:text-base mb-2">
+                  <h3 className="text-dark font-bold text-sm md:text-base mb-2">
                     {value.title}
                   </h3>
-                  <p className="text-white/50 text-xs leading-relaxed">
+                  <p className="text-dark/50 text-xs leading-relaxed">
                     {value.description}
                   </p>
                 </div>
@@ -237,9 +236,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
-        {/* أرقام الإنجاز */}
-        <CounterSection />
 
         {/* CTA */}
         <CTASection />

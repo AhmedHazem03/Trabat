@@ -56,7 +56,7 @@ export default async function AreaPage(
   };
 
   return (
-    <main className="min-h-screen bg-dark text-white">
+    <main className="min-h-screen bg-white text-dark">
       {/* JSON-LD */}
       <script
         type="application/ld+json"
@@ -64,20 +64,20 @@ export default async function AreaPage(
       />
 
       {/* Hero */}
-      <section className="bg-dark-surface py-16 md:py-24 px-4">
+      <section className="bg-light pt-28 pb-16 md:pt-36 md:pb-24 px-4 border-b border-gray-100">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-2 text-gold text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 bg-brand-red/10 border border-brand-red/30 rounded-full px-4 py-2 text-brand-red text-sm font-semibold mb-6">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
             {area.name}، الكويت
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-dark mb-6">
             نقل عفش{" "}
-            <span className="text-gold">{area.name}</span>
+            <span className="text-brand-red">{area.name}</span>
           </h1>
-          <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+          <p className="text-dark/60 text-lg md:text-xl max-w-2xl mx-auto mb-10">
             خدمة نقل عفش احترافية في {area.name} — فك وتركيب، تغليف كامل، ونقل
             آمن من الباب للباب.
           </p>
@@ -88,7 +88,7 @@ export default async function AreaPage(
               href={contact.whatsapp.area(area.name)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 min-h-[44px] w-full sm:w-auto px-8 rounded-xl bg-gold text-dark font-bold text-base hover:bg-gold-light active:scale-95 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] w-full sm:w-auto px-8 rounded-xl bg-brand-red text-white font-bold text-base hover:bg-brand-red-dark active:scale-95 transition-all duration-200"
               aria-label={`تواصل عبر واتساب عن نقل عفش ${area.name}`}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -98,7 +98,7 @@ export default async function AreaPage(
             </a>
             <a
               href={`tel:${contact.phone}`}
-              className="inline-flex items-center justify-center gap-2 min-h-[44px] w-full sm:w-auto px-8 rounded-xl border border-white/30 text-white font-bold text-base hover:border-white hover:bg-white/10 active:scale-95 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] w-full sm:w-auto px-8 rounded-xl border border-dark/20 text-dark font-bold text-base hover:border-dark/40 hover:bg-dark/5 active:scale-95 transition-all duration-200"
               aria-label="اتصل بنا"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -112,14 +112,14 @@ export default async function AreaPage(
 
       {/* Services in this area */}
       <section className="py-14 px-4 max-w-5xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
-          خدماتنا في <span className="text-gold">{area.name}</span>
+        <h2 className="text-2xl md:text-3xl font-bold text-dark text-center mb-10">
+          خدماتنا في <span className="text-brand-red">{area.name}</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {[
             {
               icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-red" aria-hidden="true">
                   <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
                   <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
@@ -129,7 +129,7 @@ export default async function AreaPage(
             },
             {
               icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-red" aria-hidden="true">
                   <rect x="2" y="3" width="20" height="14" rx="2" />
                   <line x1="8" y1="21" x2="16" y2="21" />
                   <line x1="12" y1="17" x2="12" y2="21" />
@@ -140,7 +140,7 @@ export default async function AreaPage(
             },
             {
               icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-red" aria-hidden="true">
                   <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
                 </svg>
               ),
@@ -149,7 +149,7 @@ export default async function AreaPage(
             },
             {
               icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-red" aria-hidden="true">
                   <rect x="1" y="3" width="15" height="13" />
                   <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
                   <circle cx="5.5" cy="18.5" r="2.5" />
@@ -162,14 +162,14 @@ export default async function AreaPage(
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-dark-card border border-gold/20 rounded-2xl p-6 flex gap-4 hover:border-gold/40 hover:bg-dark-surface transition-all duration-200"
+              className="bg-white border border-gray-100 rounded-2xl p-6 flex gap-4 shadow-sm hover:shadow-md hover:border-brand-red/20 transition-all duration-200"
             >
-              <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center shrink-0">
                 {item.icon}
               </div>
               <div>
-                <h3 className="text-white font-bold mb-2">{item.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="text-dark font-bold mb-2">{item.title}</h3>
+                <p className="text-dark/60 text-sm leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -180,7 +180,7 @@ export default async function AreaPage(
       <section className="py-6 px-4 text-center pb-16">
         <Link
           href="/areas"
-          className="inline-flex items-center gap-2 text-gold/70 hover:text-gold text-sm font-semibold transition-colors"
+          className="inline-flex items-center gap-2 text-brand-red/70 hover:text-brand-red text-sm font-semibold transition-colors"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M19 12H5M12 19l-7-7 7-7" />

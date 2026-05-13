@@ -10,7 +10,7 @@ const counters = [
 
 export default function CounterSection() {
   return (
-    <section className="bg-dark-card py-16 md:py-20">
+    <section className="bg-white py-16 md:py-20">
       <div className="container mx-auto px-4">
         <GoldDivider className="mb-12" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">

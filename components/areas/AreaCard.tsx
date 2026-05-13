@@ -8,7 +8,7 @@ interface AreaCardProps {
 
 export default function AreaCard({ name, slug }: AreaCardProps) {
   return (
-    <div className="group bg-dark-card border border-white/8 rounded-2xl p-5 flex flex-col gap-4 hover:border-brand-red/30 hover:bg-dark-surface transition-all duration-200">
+    <div className="group bg-white border border-gray-100 rounded-2xl p-5 flex flex-col gap-4 shadow-sm hover:border-brand-red/30 hover:shadow-md transition-all duration-200">
       {/* Location Icon + Name */}
       <div className="flex items-center gap-3">
         <div className="w-9 h-9 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
@@ -28,7 +28,7 @@ export default function AreaCard({ name, slug }: AreaCardProps) {
             <circle cx="12" cy="10" r="3" />
           </svg>
         </div>
-        <h3 className="text-white font-bold text-base">{name}</h3>
+        <h3 className="text-dark font-bold text-base">{name}</h3>
       </div>
 
       {/* Buttons */}

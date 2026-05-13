@@ -8,6 +8,7 @@ const services = [
     description: "فك وتركيب الأثاث، تغليف احترافي، نقل آمن للأغراض الثمينة والأجهزة المنزلية.",
     waMessage: "السلام عليكم، أريد الاستفسار عن النقل المنزلي",
     service: "home",
+    accent: { bar: "bg-brand-red", icon: "bg-brand-red/10 text-brand-red group-hover:bg-brand-red/20", hover: "hover:border-brand-red/30" },
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
@@ -21,6 +22,7 @@ const services = [
     description: "نقل مكاتب وشركات ومعدات تجارية بكل احترافية مع ضمان عدم تعطيل العمل.",
     waMessage: "السلام عليكم، أريد الاستفسار عن النقل التجاري",
     service: "commercial",
+    accent: { bar: "bg-gold", icon: "bg-gold/10 text-gold group-hover:bg-gold/20", hover: "hover:border-gold/30" },
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="2" y="7" width="20" height="14" rx="2"/>
@@ -36,11 +38,12 @@ const services = [
     description: "مستودعات آمنة ومؤمنة لتخزين أغراضك بضمان تام حتى موعد نقلها.",
     waMessage: "السلام عليكم، أريد الاستفسار عن خدمة التخزين",
     service: "storage",
+    accent: { bar: "bg-navy-accent", icon: "bg-navy-accent/10 text-navy-accent group-hover:bg-navy-accent/20", hover: "hover:border-navy-accent/30" },
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-        <rect x="1" y="3" width="22" height="5" rx="1"/>
-        <path d="M1 8v13a1 1 0 001 1h20a1 1 0 001-1V8"/>
+        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+        <line x1="12" y1="22.08" x2="12" y2="12"/>
       </svg>
     ),
   },
@@ -68,31 +71,36 @@ export default function ServicesPreview() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-dark-card border border-white/8 rounded-2xl p-6 flex flex-col gap-4 hover:border-gold/30 transition-colors duration-300 group"
+              className={`bg-dark-card border border-white/8 rounded-2xl overflow-hidden flex flex-col transition-colors duration-300 group ${service.accent.hover}`}
             >
-              {/* الأيقونة */}
-              <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center text-gold group-hover:bg-gold/20 transition-colors duration-300">
-                {service.icon}
-              </div>
+              {/* شريط اللون العلوي */}
+              <div className={`h-1 ${service.accent.bar}`} aria-hidden="true" />
 
-              {/* النص */}
-              <div className="flex-1">
-                <h3 className="text-white font-bold text-lg mb-2">{service.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{service.description}</p>
-              </div>
+              <div className="p-6 flex flex-col gap-4 flex-1">
+                {/* الأيقونة */}
+                <div className={`w-14 h-14 rounded-xl flex items-center justify-center transition-colors duration-300 ${service.accent.icon}`}>
+                  {service.icon}
+                </div>
 
-              {/* الزر */}
-              {service.waMessage ? (
-                <WhatsAppButton
-                  message={service.waMessage}
-                  service={service.service}
-                  className="px-4 py-2.5 text-sm w-full"
-                />
-              ) : (
-                <PhoneButton className="px-4 py-2.5 text-sm w-full">
-                  اتصل بنا
-                </PhoneButton>
-              )}
+                {/* النص */}
+                <div className="flex-1">
+                  <h3 className="text-white font-bold text-lg mb-2">{service.title}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed">{service.description}</p>
+                </div>
+
+                {/* الزر */}
+                {service.waMessage ? (
+                  <WhatsAppButton
+                    message={service.waMessage}
+                    service={service.service}
+                    className="px-4 py-2.5 text-sm w-full"
+                  />
+                ) : (
+                  <PhoneButton className="px-4 py-2.5 text-sm w-full">
+                    اتصل بنا
+                  </PhoneButton>
+                )}
+              </div>
             </div>
           ))}
         </div>

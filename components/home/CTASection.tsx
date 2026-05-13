@@ -5,14 +5,14 @@ import InstaButton from "@/components/ui/InstaButton";
 export default function CTASection() {
   return (
     <section className="bg-dark-card py-16 md:py-24 relative overflow-hidden">
-      {/* خلفية ذهبية خفيفة */}
+      {/* خلفية حمراء خفيفة */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-gold/8 via-transparent to-transparent pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-br from-brand-red/8 via-transparent to-gold/5 pointer-events-none"
         aria-hidden="true"
       />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <span className="text-gold text-sm font-semibold uppercase tracking-widest mb-4 block">
+        <span className="text-brand-red text-sm font-semibold uppercase tracking-widest mb-4 block">
           تواصل معنا الآن
         </span>
         <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">

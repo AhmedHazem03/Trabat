@@ -24,7 +24,7 @@ export default function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackContact("whatsapp", service)}
-      className={`inline-flex items-center justify-center gap-2 min-h-[44px] rounded-xl bg-gold text-dark font-bold transition-all duration-200 hover:bg-gold-light active:scale-95 ${className}`}
+      className={`inline-flex items-center justify-center gap-2 min-h-[44px] rounded-xl bg-brand-red text-white font-bold transition-all duration-200 hover:bg-brand-red-dark active:scale-95 ${className}`}
       aria-label="تواصل عبر واتساب"
     >
       {/* WhatsApp Icon */}

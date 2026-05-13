@@ -51,7 +51,7 @@ export default function FAQAccordion() {
         return (
           <div
             key={index}
-            className="bg-dark-card border border-white/8 rounded-xl overflow-hidden transition-colors duration-200 hover:border-gold/20"
+            className="bg-dark-card border border-white/8 rounded-xl overflow-hidden transition-colors duration-200 hover:border-brand-red/25"
           >
             <button
               type="button"
@@ -65,7 +65,7 @@ export default function FAQAccordion() {
               <motion.span
                 animate={{ rotate: isOpen ? 180 : 0 }}
                 transition={{ duration: 0.25, ease: "easeInOut" }}
-                className="shrink-0 text-gold"
+                className="shrink-0 text-brand-red"
                 aria-hidden="true"
               >
                 <svg

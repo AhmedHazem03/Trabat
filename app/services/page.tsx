@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   },
 };
 
+const accentColors = ["red", "gold", "blue", "red"] as const;
+
 const services = [
   {
     title: "النقل المنزلي",
@@ -132,8 +134,8 @@ export default function ServicesPage() {
         <section className="bg-dark py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {services.map((service) => (
-                <ServiceCard key={service.title} {...service} />
+              {services.map((service, i) => (
+                <ServiceCard key={service.title} {...service} accent={accentColors[i]} />
               ))}
             </div>
           </div>

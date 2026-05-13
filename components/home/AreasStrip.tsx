@@ -10,13 +10,13 @@ export default function AreasStrip() {
       <div className="container mx-auto px-4 mb-6 text-center">
         <span className="text-white/40 text-sm">
           نخدم أكثر من{" "}
-          <span className="text-gold font-semibold">22 منطقة</span>{" "}
+          <span className="text-brand-red font-semibold">22 منطقة</span>{" "}
           في الكويت
         </span>
       </div>
 
       {/* الـ Marquee — CSS خالص بدون مكتبات (MOB-05) */}
-      <div className="overflow-hidden" aria-hidden="true">
+      <div className="overflow-hidden" dir="ltr" aria-hidden="true">
         <div className="marquee-track">
           {items.map((area, i) => (
             <span

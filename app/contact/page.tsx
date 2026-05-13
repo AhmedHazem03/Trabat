@@ -21,8 +21,8 @@ export default function ContactPage() {
     <main className="min-h-screen bg-dark text-white">
       {/* Hero */}
       <section className="bg-dark-surface py-16 md:py-24 text-center px-4">
-        <h1 className="text-3xl md:text-5xl font-bold text-gold mb-4">
-          تواصل معنا
+        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          تواصل <span className="text-brand-red">معنا</span>
         </h1>
         <p className="text-white/70 text-lg max-w-xl mx-auto">
           نحن هنا لمساعدتك. تواصل معنا مباشرة عبر واتساب أو هاتف، بدون انتظار.
@@ -37,7 +37,7 @@ export default function ContactPage() {
             href={contact.whatsapp.general}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col items-center gap-4 bg-dark-card border border-gold/20 rounded-2xl p-8 text-center hover:border-gold/60 hover:bg-dark-surface transition-all duration-200"
+            className="group flex flex-col items-center gap-4 bg-dark-card border border-white/8 rounded-2xl p-8 text-center hover:border-brand-red/40 hover:bg-dark-surface transition-all duration-200"
             aria-label="تواصل عبر واتساب"
           >
             <div className="w-16 h-16 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center group-hover:bg-green-500/20 transition-colors">
@@ -57,18 +57,18 @@ export default function ContactPage() {
           {/* Phone */}
           <a
             href={`tel:${contact.phone}`}
-            className="group flex flex-col items-center gap-4 bg-dark-card border border-gold/20 rounded-2xl p-8 text-center hover:border-gold/60 hover:bg-dark-surface transition-all duration-200"
+            className="group flex flex-col items-center gap-4 bg-dark-card border border-white/8 rounded-2xl p-8 text-center hover:border-gold/40 hover:bg-dark-surface transition-all duration-200"
             aria-label="اتصل بنا"
           >
             <div className="w-16 h-16 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gold" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.72A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
               </svg>
             </div>
             <div>
               <h2 className="text-xl font-bold text-white mb-1">اتصال مباشر</h2>
               <p className="text-white/60 text-sm mb-4">تحدث مع فريقنا مباشرة</p>
-              <span className="inline-flex items-center justify-center min-h-[44px] px-6 rounded-xl bg-gold text-dark font-bold text-sm hover:bg-gold-light transition-colors">
+              <span className="inline-flex items-center justify-center min-h-[44px] px-6 rounded-xl bg-brand-red text-white font-bold text-sm hover:bg-brand-red-dark transition-colors">
                 اتصل الآن
               </span>
             </div>
@@ -79,7 +79,7 @@ export default function ContactPage() {
             href={contact.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col items-center gap-4 bg-dark-card border border-gold/20 rounded-2xl p-8 text-center hover:border-pink-500/50 hover:bg-dark-surface transition-all duration-200"
+            className="group flex flex-col items-center gap-4 bg-dark-card border border-white/8 rounded-2xl p-8 text-center hover:border-pink-500/40 hover:bg-dark-surface transition-all duration-200"
             aria-label="راسلنا على انستاغرام"
           >
             <div className="w-16 h-16 rounded-full bg-pink-500/10 border border-pink-500/30 flex items-center justify-center group-hover:bg-pink-500/20 transition-colors">
@@ -102,8 +102,8 @@ export default function ContactPage() {
 
       {/* Working Hours */}
       <section className="py-10 px-4 max-w-3xl mx-auto">
-        <div className="bg-dark-card border border-gold/20 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-gold mb-6 text-center">ساعات العمل</h2>
+        <div className="bg-dark-card border border-white/8 rounded-2xl p-8">
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">ساعات <span className="text-gold">العمل</span></h2>
           <div className="space-y-4">
             <div className="flex justify-between items-center border-b border-white/10 pb-4">
               <span className="text-white font-semibold">السبت – الخميس</span>
@@ -114,7 +114,7 @@ export default function ContactPage() {
               <span className="text-white/70 text-sm">10:00 صباحاً – 10:00 مساءً</span>
             </div>
           </div>
-          <p className="text-center text-gold/80 text-sm mt-6">
+          <p className="text-center text-brand-red/80 text-sm mt-6">
             نخدمك 7 أيام في الأسبوع — بدون أيام عطلة
           </p>
         </div>
@@ -122,8 +122,8 @@ export default function ContactPage() {
 
       {/* Google Maps Embed */}
       <section className="py-10 px-4 max-w-5xl mx-auto pb-16">
-        <h2 className="text-2xl font-bold text-gold mb-6 text-center">موقعنا</h2>
-        <div className="rounded-2xl overflow-hidden border border-gold/20">
+        <h2 className="text-2xl font-bold text-white mb-6 text-center">موقعنا</h2>
+        <div className="rounded-2xl overflow-hidden border border-white/10">
           <iframe
             src="https://maps.google.com/maps?q=%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA&output=embed"
             width="100%"

@@ -3,18 +3,21 @@ const testimonials = [
     name: "أحمد الرشيدي",
     area: "مشرف",
     rating: 5,
+    avatarAccent: "bg-brand-red/20 text-brand-red",
     text: "خدمة ممتازة، الفريق وصل في الوقت المحدد وأنهى النقل بسرعة ودقة. الأثاث وصل سليم 100% دون أي خدش. أنصح بهم بشدة!",
   },
   {
     name: "فاطمة الكندري",
     area: "السالمية",
     rating: 5,
+    avatarAccent: "bg-gold/20 text-gold",
     text: "نقلت شقة كاملة مع تربات وكانت التجربة رائعة جداً. التغليف كان احترافي والتركيب بعد النقل صح تماماً. سأتعامل معهم مرة ثانية.",
   },
   {
     name: "محمد البغلي",
     area: "بيان",
     rating: 5,
+    avatarAccent: "bg-navy-accent/20 text-navy-accent",
     text: "نقل مكتبي تم بكل احترافية، حتى أجهزة الكمبيوتر وصلت سليمة. الأسعار منطقية جداً مقارنة بالخدمة المقدمة.",
   },
 ];
@@ -55,7 +58,7 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        {/* الكروت — موبايل: عمود واحد / ديسكتوب: 3 أعمدة */}
+        {/* الكروت */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
           {testimonials.map((t) => (
             <div
@@ -72,7 +75,7 @@ export default function Testimonials() {
 
               {/* العميل */}
               <div className="flex items-center gap-3 pt-2 border-t border-white/8">
-                <div className="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm shrink-0">
+                <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shrink-0 ${t.avatarAccent}`}>
                   {t.name.charAt(0)}
                 </div>
                 <div>

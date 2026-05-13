@@ -2,6 +2,7 @@ const features = [
   {
     title: "خبرة 5+ سنوات",
     description: "سنوات من التميز في خدمات نقل البضائع والأثاث في الكويت.",
+    accent: "bg-brand-red/10 text-brand-red group-hover:bg-brand-red/20",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <circle cx="12" cy="8" r="7"/>
@@ -12,6 +13,7 @@ const features = [
   {
     title: "فريق محترف",
     description: "عمال مدربون على أحدث أساليب الفك والتركيب والتغليف الآمن.",
+    accent: "bg-gold/10 text-gold group-hover:bg-gold/20",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
@@ -23,6 +25,7 @@ const features = [
   {
     title: "ضمان السلامة",
     description: "نضمن سلامة أغراضك من لحظة الاستلام حتى التسليم التام.",
+    accent: "bg-navy-accent/10 text-navy-accent group-hover:bg-navy-accent/20",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -33,6 +36,7 @@ const features = [
   {
     title: "أسعار تنافسية",
     description: "أسعار عادلة وشفافة بدون رسوم مخفية مع أفضل جودة في الخدمة.",
+    accent: "bg-brand-red/10 text-brand-red group-hover:bg-brand-red/20",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <line x1="12" y1="1" x2="12" y2="23"/>
@@ -60,9 +64,9 @@ export default function WhyUs() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-dark-card border border-white/8 hover:border-gold/30 transition-colors duration-300 group"
+              className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-dark-card border border-white/8 hover:border-white/20 transition-colors duration-300 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center text-gold group-hover:bg-gold/20 transition-colors duration-300 shrink-0">
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center transition-colors duration-300 shrink-0 ${feature.accent}`}>
                 {feature.icon}
               </div>
               <h3 className="text-white font-bold text-base leading-snug">

@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   },
 };
 
+const valueAccents = [
+  { card: "border-brand-red/20 hover:border-brand-red/40", icon: "bg-brand-red/10 border-brand-red/20 text-brand-red" },
+  { card: "border-gold/20 hover:border-gold/40", icon: "bg-gold/10 border-gold/20 text-gold" },
+  { card: "border-navy-accent/20 hover:border-navy-accent/40", icon: "bg-navy-accent/10 border-navy-accent/20 text-navy-accent" },
+  { card: "border-brand-red/20 hover:border-brand-red/40", icon: "bg-brand-red/10 border-brand-red/20 text-brand-red" },
+];
+
 const values = [
   {
     title: "الأمانة والشفافية",
@@ -163,8 +170,8 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {/* الرسالة */}
-              <div className="bg-dark-card border border-gold/20 rounded-2xl p-6 md:p-8">
-                <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold mb-4">
+              <div className="bg-dark-card border border-brand-red/25 rounded-2xl p-6 md:p-8">
+                <div className="w-10 h-10 rounded-xl bg-brand-red/10 flex items-center justify-center text-brand-red mb-4">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
                   </svg>
@@ -177,8 +184,8 @@ export default function AboutPage() {
               </div>
 
               {/* الرؤية */}
-              <div className="bg-dark-card border border-white/8 rounded-2xl p-6 md:p-8">
-                <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold mb-4">
+              <div className="bg-dark-card border border-navy-accent/25 rounded-2xl p-6 md:p-8">
+                <div className="w-10 h-10 rounded-xl bg-navy-accent/10 flex items-center justify-center text-navy-accent mb-4">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <circle cx="12" cy="12" r="10" />
                     <circle cx="12" cy="12" r="3" />
@@ -211,12 +218,12 @@ export default function AboutPage() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {values.map((value) => (
+              {values.map((value, i) => (
                 <div
                   key={value.title}
-                  className="bg-dark-surface border border-white/8 rounded-2xl p-5 md:p-6 text-center hover:border-gold/25 transition-colors duration-300"
+                  className={`bg-dark-surface border rounded-2xl p-5 md:p-6 text-center transition-colors duration-300 ${valueAccents[i].card}`}
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mx-auto mb-4">
+                  <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center mx-auto mb-4 ${valueAccents[i].icon}`}>
                     {value.icon}
                   </div>
                   <h3 className="text-white font-bold text-sm md:text-base mb-2">

@@ -12,9 +12,9 @@ export default function HeroSection() {
         className="absolute inset-0 opacity-[0.03] dot-texture"
         aria-hidden="true"
       />
-      {/* تدرج ذهبي خفيف */}
+      {/* تدرج أحمر خفيف */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-br from-brand-red/5 via-transparent to-transparent pointer-events-none"
         aria-hidden="true"
       />
 
@@ -24,9 +24,9 @@ export default function HeroSection() {
           {/* النص */}
           <div className="text-center md:text-start order-2 md:order-1">
             {/* شارة */}
-            <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-1.5 mb-6">
-              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" aria-hidden="true" />
-              <span className="text-gold text-sm font-medium">خدمة نقل معتمدة في الكويت</span>
+            <div className="inline-flex items-center gap-2 bg-brand-red/10 border border-brand-red/30 rounded-full px-4 py-1.5 mb-6">
+              <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" aria-hidden="true" />
+              <span className="text-brand-red text-sm font-semibold">خدمة نقل معتمدة في الكويت</span>
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -71,14 +71,14 @@ export default function HeroSection() {
           {/* الصورة */}
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative w-full max-w-sm md:max-w-none">
-              {/* هالة ذهبية خلف الصورة */}
+              {/* هالة خلف الصورة */}
               <div
-                className="absolute inset-0 rounded-3xl bg-gold/10 blur-3xl scale-95"
+                className="absolute inset-0 rounded-3xl bg-brand-red/8 blur-3xl scale-95"
                 aria-hidden="true"
               />
               <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-dark-card aspect-[4/3] md:aspect-[3/2]">
                 <Image
-                  src="/images/truck-placeholder.svg"
+                  src="/images/hero_image.png"
                   alt="شاحنة نقل تربات في الكويت"
                   fill
                   className="object-cover"

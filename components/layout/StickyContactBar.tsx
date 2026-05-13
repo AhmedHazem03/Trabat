@@ -11,7 +11,7 @@ export default function StickyContactBar() {
         <a
           href={`tel:${contact.phone}`}
           onClick={() => trackContact("phone")}
-          className="flex flex-col items-center justify-center gap-1 text-white/70 hover:text-gold hover:bg-white/5 transition-colors duration-200 py-3 min-h-[56px]"
+          className="flex flex-col items-center justify-center gap-1 text-white/70 hover:text-brand-red hover:bg-white/5 transition-colors duration-200 py-3 min-h-[56px]"
           aria-label="اتصل بنا"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -26,7 +26,7 @@ export default function StickyContactBar() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackContact("whatsapp")}
-          className="flex flex-col items-center justify-center gap-1 bg-gold/10 text-gold hover:bg-gold/20 transition-colors duration-200 py-3 border-x border-white/10 min-h-[56px]"
+          className="flex flex-col items-center justify-center gap-1 bg-brand-red/10 text-brand-red hover:bg-brand-red/20 transition-colors duration-200 py-3 border-x border-white/10 min-h-[56px]"
           aria-label="تواصل عبر واتساب"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -41,7 +41,7 @@ export default function StickyContactBar() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackContact("instagram")}
-          className="flex flex-col items-center justify-center gap-1 text-white/70 hover:text-gold hover:bg-white/5 transition-colors duration-200 py-3 min-h-[56px]"
+          className="flex flex-col items-center justify-center gap-1 text-white/70 hover:text-pink-400 hover:bg-white/5 transition-colors duration-200 py-3 min-h-[56px]"
           aria-label="تابعنا على انستغرام"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
